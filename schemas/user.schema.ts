@@ -3,54 +3,54 @@ import { z } from "zod";
 export const registerSchema = z.object({
   username: z
     .string({
-      invalid_type_error: "El nombre debe ser una cadena de caracteres",
-      required_error: "El nombre es un campo requerido",
+      invalid_type_error: "The name must be a string of characters",
+      required_error: "Name is a required field",
     })
     .min(4, {
-      message: "El nombre debe contener al menos 4 caracteres",
+      message: "The name must contain at least 4 characters",
     })
     .max(30, {
-      message: "El nombre no puede exceder los 30 caracteres",
+      message: "The name cannot exceed 30 characters",
     }),
   email: z
     .string({
-      invalid_type_error: "El email debe ser una cadena de caracteres válida",
-      required_error: "El email es un campo requerido",
+      invalid_type_error: "The email must be a valid character string",
+      required_error: "Email is a required field",
     })
     .email({
-      message: "El email no es válido",
+      message: "The email is not valid",
     }),
   password: z
     .string({
-      invalid_type_error: "La contraseña debe ser una cadena de caracteres",
-      required_error: "La contraseña es un campo requerido",
+      invalid_type_error: "Password must be a string of characters",
+      required_error: "Password is a required field",
     })
     .min(8, {
-      message: "La contraseña debe contener al menos 8 caracteres",
+      message: "Password must contain at least 8 characters",
     })
     .max(30, {
-      message: "La contraseña no puede exceder los 30 caracteres",
+      message: "Password cannot exceed 30 characters",
     }),
 });
 
 export const loginSchema = z.object({
   email: z
     .string({
-      invalid_type_error: "El email debe ser una cadena de caracteres válida",
-      required_error: "El email es un campo requerido",
+      invalid_type_error: "The email must be a valid character string",
+      required_error: "Email is a required field",
     })
     .email({
-      message: "El email no es válido",
+      message: "The email is not valid",
     }),
   password: z
     .string({
-      invalid_type_error: "La contraseña debe ser una cadena de caracteres",
-      required_error: "La contraseña es un campo requerido",
+      invalid_type_error: "Password must be a string of characters",
+      required_error: "Password is a required field",
     })
     .min(8, {
-      message: "La contraseña debe contener al menos 8 caracteres",
+      message: "Password must contain at least 8 characters",
     })
     .max(30, {
-      message: "La contraseña no puede exceder los 30 caracteres",
+      message: "Password cannot exceed 30 characters",
     }),
 });
