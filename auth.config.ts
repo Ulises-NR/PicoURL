@@ -19,7 +19,13 @@ export const authConfig = {
 
       return true;
     },
-    async jwt({ token }) {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.username = user.username;
+        token.email = user.email;
+      }
+
       return token;
     },
     async session({ session, token }) {
