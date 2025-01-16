@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple example steps.
 
 2. Clone the repo
    ```sh
-   git clone https://github.com/Ulises-Saucedo/PicoURL.git
+   git clone https://github.com/Ulises-NR/PicoURL.git
    ```
 3. Install NPM packages
    ```sh
